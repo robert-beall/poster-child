@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    env_file: 
+      - path: .env.local
+        required: true
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
